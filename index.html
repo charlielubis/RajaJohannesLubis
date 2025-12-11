@@ -152,9 +152,16 @@ function renderGallery() {
   galleryGrid.innerHTML = photos
     .map(src => `<img src="${src}" style="width:100%; border-radius:8px;">`)
     .join("");
-}</script><script>// Add reactions and comment functionality to each news card
-document.querySelectorAll('.news-card').forEach(card => {
-  // Create reaction bar
+}</script><script>document.querySelectorAll('.news-card').forEach((card, index) => {
+  const cardId = `news-card-${index}`;
+
+  // Load stored data from localStorage
+  const storedData = JSON.parse(localStorage.getItem(cardId)) || {
+    reactions: Array(8).fill(0),
+    comments: []
+  };
+
+  // --- REACTIONS ---
   const reactionBar = document.createElement('div');
   reactionBar.className = 'reaction-bar';
   const emojis = [
@@ -168,21 +175,24 @@ document.querySelectorAll('.news-card').forEach(card => {
     {icon:'😭', name:'Cry'}
   ];
 
-  emojis.forEach(e => {
+  emojis.forEach((e, i) => {
     const btn = document.createElement('button');
     btn.className = 'reaction-btn';
-    btn.innerText = e.icon;
-    let count = 0;
+    let count = storedData.reactions[i] || 0;
+    btn.innerText = `${e.icon} ${count}`;
+    
     btn.onclick = () => {
       count++;
+      storedData.reactions[i] = count;
       btn.innerText = `${e.icon} ${count}`;
+      localStorage.setItem(cardId, JSON.stringify(storedData));
     };
     reactionBar.appendChild(btn);
   });
 
   card.appendChild(reactionBar);
 
-  // Create comment area (always visible)
+  // --- COMMENTS ---
   const commentBox = document.createElement('div');
   commentBox.className = 'comment-box';
   commentBox.innerHTML = `
@@ -193,18 +203,38 @@ document.querySelectorAll('.news-card').forEach(card => {
   `;
   card.appendChild(commentBox);
 
-  // Handle comment submit
   const submitBtn = commentBox.querySelector('.comment-submit');
-  submitBtn.onclick = () => {
-    const nameInput = commentBox.querySelector('.name');
-    const commentInput = commentBox.querySelector('.comment');
-    if (!nameInput.value || !commentInput.value) return;
-    const commentList = commentBox.querySelector('.comment-list');
+  const nameInput = commentBox.querySelector('.name');
+  const commentInput = commentBox.querySelector('.comment');
+  const commentList = commentBox.querySelector('.comment-list');
+
+  // Load stored comments
+  storedData.comments.forEach(c => {
     const commentItem = document.createElement('div');
     commentItem.className = 'comment-item';
-    // Prepend name automatically
+    commentItem.innerHTML = `<b>${c.name}:</b> ${c.text}`;
+    commentList.appendChild(commentItem);
+  });
+
+  const addComment = () => {
+    if (!nameInput.value || !commentInput.value) return;
+    const commentItem = document.createElement('div');
+    commentItem.className = 'comment-item';
     commentItem.innerHTML = `<b>${nameInput.value}:</b> ${commentInput.value}`;
     commentList.appendChild(commentItem);
+    commentList.scrollTop = commentList.scrollHeight;
+
+    // Save to localStorage
+    storedData.comments.push({name: nameInput.value, text: commentInput.value});
+    localStorage.setItem(cardId, JSON.stringify(storedData));
+
     commentInput.value = '';
   };
+
+  submitBtn.onclick = addComment;
+  [nameInput, commentInput].forEach(input => {
+    input.addEventListener('keypress', e => {
+      if (e.key === 'Enter') addComment();
+    });
+  });
 });</script>

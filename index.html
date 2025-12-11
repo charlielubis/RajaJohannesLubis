@@ -21,6 +21,50 @@ body{
   color:#111; /* main text color */
 }
 
+/* Beranda */  
+.reaction-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.reaction-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.comment-box {
+  margin-top: 10px;
+}
+
+.comment-item {
+  background: #f5f5f5;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+}
+
+.comment-submit {
+  margin-top: 4px;
+  padding: 4px 10px;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
 /* Top navbar */
 .top-nav{
   position:fixed;
@@ -244,6 +288,8 @@ main{padding:80px 14px 80px}
           visibility: visible;
           transform: scale(1);
       }
+
+      
     </style>
 
     <input type="range" min="16" max="100" value="16" id="range">
@@ -263,10 +309,23 @@ main{padding:80px 14px 80px}
                               </li>
                               <li>
                                    <input type="checkbox" id="sariburaja">
-                                   <label for="sariburaja">Sariburaja</label>
+                                   <label for="sariburaja">Tuan Sariburaja</label>
                                    <ul>
                                        <li>
-                                        <label>Raja Lontung</label>
+                                        <input type="checkbox" id="Lontung">
+                                        <label for="Lontung">Si Raja Lontung</label>
+                                          <ul>
+                                                 <li>
+                                                     <label><p>Seluruh keturunan Sinaga</p>
+                                                            <p>Situmorang, Sitohang, Siringo-ringo, Rumapea</p> 
+                                                            <p>Pandiangan, Gultom, Pakpahan, Samosir, Sitinjak, Harianja</p> 
+                                                            <p>Seluruh keturunan Nainggolan</p> 
+                                                            <p>Seluruh keturunan Simatupang</p> 
+                                                            <p>Seluruh keturunan Aritonang</p> 
+                                                            <p>Seluruh keturunan Siregar</p> 
+                                                          </label>
+                                                </li>
+                                          </ul>
                                        </li>   
                                        <li>
                                         <input type="checkbox" id="borbor">
@@ -503,30 +562,120 @@ main{padding:80px 14px 80px}
                   <ul>
                       <li>
                            <input type="checkbox" id="react">
-                           <label for="react">React</label>
+                           <label for="react">Tuan Sorimangaraja</label>
                             <ul>
                                 <li>
-                                    <label>React Native</label>
+                                    <input type="checkbox" id="ambaton">
+                                    <label for="ambaton">Nai Ambaton </label>
+                                    <ul>
+                                        <li>
+                                             <label>Pomparan marga Parna</label>
+                                       </li>
+                                    </ul>
                                </li>
                                 <li>
-                                    <label>NextJS</label>
+                                    <input type="checkbox" id="rasaon">
+                                    <label for="rasaon">Nai Rasaon</label>
+                                    <ul>
+                                        <li>
+                                             <label>Sitorus, Sirait, Butar-butar, Manurung</label>
+                                       </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <input type="checkbox" id="suanon">
+                                    <label for="suanon">Nai Suanon</label>
+                                    <ul>
+                                        <li>
+                                             <input type="checkbox" id="Pohan">
+                                             <label for="Pohan">Si Bagot Ni Pohan</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Siahaan, Simanjuntak, Hutagaol, Nasution, Pohan</p>
+                                                            <p>Tampubolon, Barimbing, Silaen</p> 
+                                                            <p>Panjaitan, Silitonga, Sianipar, Siagian, Pardosi</p> 
+                                                            <p>Simangunsong, Marpaung, Napitupulu, Pardede</p> 
+                                                          </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Paet">
+                                             <label for="Paet">Si Paet Tua</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Hutahaean, Hutajulu, Aruan</p>
+                                                            <p>Sibarani, Sibuea, Sarumpaet</p> 
+                                                            <p>Pangaribuan, Hutapea</p> 
+                                                    </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="lahi">
+                                             <label for="lahi">Si Lahi Sabungan</label>
+                                             <ul>
+                                                 <li>
+                                                     <label>Seluruh Silalahi dan Tambunan</label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="oloan">
+                                             <label for="oloan">Si Raja Oloan</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Naibaho, Sihotang, Bakkara</p>
+                                                            <p>Sinambela, Sihite, Manullang</p>
+                                                     </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <label>Si Raja Huta Lima</label>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Sumba">
+                                             <label for="Sumba">Si Raja Sumba</label>
+                                             <ul>
+                                                 <li>
+                                                     <label>Seluruh keturunan Sihombing dan Simamora</label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Sobu">
+                                             <label for="Sobu">Si Raja Sobu</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Sitompul, Hasibuan, Hutabarat</p>
+                                                            <p>Panggabean, Simorangkir, Hutagalung</p>
+                                                            <p>Lumban Tobing, Hutapea</p>
+                                                    </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Naipospos">
+                                             <label for="Naipospos">Si Raja Naipospos</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Seluruh keturunan Marbun</p>
+                                                            <p>Sibagariang, Simanungkalit, Hutauruk, Situmeang</p>
+                                                     </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                    </ul>
+                                </li>
                                 </li>
                             </ul>
                       </li>
                       <li>
-                           <label>Vue</label>
+                           <label>Raja Asi-Asi (merantau ke Aceh)</label>
                       </li>
                        <li>
-                          <input type="checkbox" id="angular">
-                          <label for="angular">Angular</label>
-                            <ul>
-                                <li>
-                                    <label>test</label>
-                               </li>
-                                <li>
-                                    <label>test2</label>
-                               </li>
-                           </ul>
+                          <label>Langka Somalindang (merantau ke Padang)</label>
                        </li>
                    </ul>
             </li>
@@ -561,6 +710,7 @@ main{padding:80px 14px 80px}
     <button id="nextMonth" style="background:none; border:none; color:var(--accent); font-size:18px;">▶</button>
   </div>
 
+
   <!-- Calendar Box -->
   <div id="calendarBox" style="
     background:var(--card);
@@ -573,6 +723,8 @@ main{padding:80px 14px 80px}
 
   <!-- Event Info -->
   <div id="eventInfo"></div>
+
+  <div class="pengumuman"><i>*] Jadwal sewaktu-waktu bisa berubah</i></div>
 </section>
 
 
@@ -620,26 +772,69 @@ main{padding:80px 14px 80px}
     <h3>G. Lubis / br. Pardosi</h3>
     <p>Putra : PH. Lubis, J. Lubis, JL Lubis</p>
     <p>Putri : T. br Lubis, R. br Lubis, N. br Lubis, M. br Lubis</p>
+    <p><br><b>PH. Lubis / br. Manalu</b></br></p>
+    <p>Dupak Bangunsari 7/35 Surabaya</p>
+    <p><br><b>J. Lubis / br. Simanjuntak</b></br></p>
+    <p>Jl. Pancasila No. 84 - Medan Denai</p>
+    <p><br><b>JL. Lubis / br. Napitupulu</b></br></p>
+    <p>Jl. Pancasila No. 84- Medan Denai</p>
+    <p><br><b>E. Simanjuntak / T. br. Lubis</b></br></p>
+    <p>Jl. Perumahan Pemda Jatiasih - Bekasi</p>
+    <p><br><b>Sitanggang / R. br. Lubis</b></br></p>
+    <p>Jl. Pancasila No. 84- Medan Denai</p>
+    <p><br><b>Sinaga / N. br. Lubis</b></br></p>
+    <p>Jl. Menteng Raya - Medan Denai</p>
+    <p><br><b>Pardede / M. br. Lubis</b></br></p>
+    <p>Jl. Pancasila No. 84- Medan Denai</p>
+
   </div>
 
   <div class="news-card">
     <h3>H. Lubis / br. Silitonga</h3>
     <p>Putra : J. Lubis, B. Lubis, T. Lubis, A. Lubis, L. Lubis</p>
     <p>Putri : J. br Lubis, H. Lubis, H. Lubis</p>
+    <p><br><b>J. Lubis / br. Silitonga</b></br></p>
+    <p>Siantar - Sumatera Utara</p>
+    <p><br><b>B. Lubis / br. Siagian</b></br></p>
+    <p>Parsoburan - Tapanuli Utara</p>
+    <p><br><b>T. Lubis / br. Silitonga</b></br></p>
+    <p>Gang Haji Jihun - Pulo Gebang - Jakarta Timur</p>
+    <p><br><b>A. Lubis / br. </b></br></p>
+    <p>Batam</p>
+    <p><br><b>L. Lubis / br. Nainggolan</b></br></p>
+    <p>Pondok Ungu Permai - Bekasi</p>
+    <p><br><b>W. Sitorus / J. br. Lubis</b></br></p>
+    <p>Gang T - Cipinang Muara - Jakarta Timur</p>
+    <p><br><b>P. Sitorus / H. br. Lubis</b></br></p>
+    <p>Kampung Sawah - Bekasi</p>
+    <p><br><b>R. Sitorus / H. br. Lubis</b></br></p>
+    <p>Ciledug - Tangerang Selatan</p>
   </div>
 
   <div class="news-card">
     <h3>B. Lubis / br. Pangaribuan</h3>
     <p>Putra: H. Lubis, A. Lubis, T. Lubis</p>
     <p>Putri: P. br. Lubis</p>
+    <p><br><b>H. Lubis / br. Tambun</b></br></p>
+    <p>Binjai - Sumatera Utara</p>
+    <p><br><b>A. Lubis / br. Siregar</b></br></p>
+    <p>Lumban Rau - Tapanuli Utara</p>
+    <p><br><b>T. Lubis / br. Simanjuntak</b></br></p>
+    <p>Gang Sadar III - Albaidho - Jakarta Timur</p>
+    <p><br><b>Pardosi / P. br. Lubis</b></br></p>
+    <p>Porong - Sidoarjo - Jawa Timur</p>
 
-    <h3>B. Lubis / br. Siagian</h3>
+    <h3><br>B. Lubis / br. Siagian</br></h3>
     <p>Putra: P. Lubis, R. Lubis, T. Lubis</p>
     <p>Putri: R. br. Lubis, saya lupa, saya lupa</p>
+    <p><br><b>P. Lubis / R. br. Pakpahan</b></br></p>
+    <p>Perumahan Visar - Cibinong - Bogor</p>
+    <p><br><b>T. Lubis / br. Butar-butar</b></br></p>
+    <p>Batam</p>
   </div>
 
   <div class="news-card">
-    <h3>Panjaitan / br. Lubia</h3>
+    <h3>Panjaitan / br. Lubis</h3>
     <p>lupa</p>
   </div>
 
@@ -830,6 +1025,63 @@ function renderGallery() {
 }
 </script>
 
+<script>
+// Add reactions and comment functionality to each news card
+document.querySelectorAll('.news-card').forEach(card => {
+  // Create reaction bar
+  const reactionBar = document.createElement('div');
+  reactionBar.className = 'reaction-bar';
+  const emojis = [
+    {icon:'❤️', name:'Love'}, 
+    {icon:'👍', name:'Like'},
+    {icon:'👎', name:'Dislike'},
+    {icon:'🙏', name:'Apology'},
+    {icon:'😲', name:'Amazed'},
+    {icon:'😄', name:'Laugh'},
+    {icon:'🎉', name:'Party'},
+    {icon:'😭', name:'Cry'}
+  ];
 
+  emojis.forEach(e => {
+    const btn = document.createElement('button');
+    btn.className = 'reaction-btn';
+    btn.innerText = e.icon;
+    let count = 0;
+    btn.onclick = () => {
+      count++;
+      btn.innerText = `${e.icon} ${count}`;
+    };
+    reactionBar.appendChild(btn);
+  });
+
+  card.appendChild(reactionBar);
+
+  // Create comment area (always visible)
+  const commentBox = document.createElement('div');
+  commentBox.className = 'comment-box';
+  commentBox.innerHTML = `
+    <input type="text" placeholder="Nama Anda" class="comment-input name" />
+    <input type="text" placeholder="Tulis komentar..." class="comment-input comment" />
+    <button class="comment-submit">Kirim</button>
+    <div class="comment-list"></div>
+  `;
+  card.appendChild(commentBox);
+
+  // Handle comment submit
+  const submitBtn = commentBox.querySelector('.comment-submit');
+  submitBtn.onclick = () => {
+    const nameInput = commentBox.querySelector('.name');
+    const commentInput = commentBox.querySelector('.comment');
+    if (!nameInput.value || !commentInput.value) return;
+    const commentList = commentBox.querySelector('.comment-list');
+    const commentItem = document.createElement('div');
+    commentItem.className = 'comment-item';
+    // Prepend name automatically
+    commentItem.innerHTML = `<b>${nameInput.value}:</b> ${commentInput.value}`;
+    commentList.appendChild(commentItem);
+    commentInput.value = '';
+  };
+});
+</script>
 </body>
 </html>

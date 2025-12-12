@@ -1,4 +1,866 @@
-<!doctypehtml><html lang=en><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Mobile App Responsive</title><style>:root{--bg:#ffffff;--card:#e6e6e6;--accent:#d40606;--muted:#374151;--glass:rgba(0,0,0,0.03);--nav-h:62px}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#111}.reaction-bar{display:flex;justify-content:space-around;margin-top:10px}.reaction-btn{background:0 0;border:none;font-size:20px;cursor:pointer}.comment-box{margin-top:10px}.comment-item{background:#f5f5f5;margin-top:8px;padding:8px;border-radius:8px}.comment-input{width:100%;padding:6px;border-radius:6px;border:1px solid #ccc;margin-top:6px}.comment-submit{margin-top:4px;padding:4px 10px;background:var(--accent);border:none;color:#fff;border-radius:6px;cursor:pointer;font-size:14px}.top-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);display:flex;justify-content:space-around;align-items:center;background:url(bg-button.webp);z-index:999;border-bottom:1px solid rgba(0,0,0,.1)}.top-nav button{background:0 0;color:var(--muted);border:none;font-size:15px;padding:8px}.top-nav button.active{color:var(--accent)}.bottom-nav{position:fixed;bottom:0;left:0;right:0;height:var(--nav-h);display:flex;justify-content:space-around;align-items:center;background:url(bg-button.webp);z-index:999;border-top:1px solid rgba(0,0,0,.1)}.bottom-nav button{background:0 0;color:var(--muted);border:none;font-size:15px;padding:8px}.bottom-nav button.active{color:var(--accent)}main{padding:80px 14px 80px}.carousel{position:relative;overflow:hidden;border-radius:14px;height:200px;margin-bottom:20px}.slides{display:flex;transition:.4s ease}.slide{min-width:100%;height:200px;display:flex;justify-content:center;align-items:center;font-size:20px;font-weight:700;color:#fff;text-shadow:2px 2px #000}.s1{background:url(Rj-Mandopa.webp)}.s2{background:url(hkbp.webp)}.s3{background:url(family.webp)}.dots{display:flex;justify-content:center;gap:6px;margin-top:10px}.dot{width:10px;height:10px;border-radius:50%;background:#ccc}.dot.active{background:#111}.news-card{background:var(--card);padding:14px;border-radius:12px;margin-bottom:14px;border:10px solid transparent;border-image-source:url(cards.webp);border-image-slice:20;border-image-repeat:stretch}.news-card h3{margin:0 0 6px;font-size:17px;color:#111}.news-card p{margin:0;color:var(--muted);font-size:14px}</style><div class=top-nav><button class="top-btn active"data-page=home><b>Beranda</b></button> <button class=top-btn data-page=genealogy><b>Tarombo</b></button> <button class=top-btn data-page=agenda><b>Agenda</b></button></div><main id=content><section class=page id=home><div class=carousel id=carousel><div class=slides id=slideTrack><div class="slide s1">Horas... Shalom... Keluarga Lubis memang keren</div><div class="slide s2">Tugu Lubis</div><div class="slide s3">Keluarga besar Raja Johannes Lubis</div></div></div><div class=dots id=dots></div><div class=news-card><h3>Turut Berduka Cita</h3><p>Seluruh Keluarga Raja Johannes Lubis berduka cita atas meninggalnya mama Mora (br. Nainggolan) pada tanggal 20 Nov 2025.</div><div class=news-card><h3>Selamat Ulang Tahun</h3><p>Silahkan isi siapa yang ulang tahun di bulan Desember</div><div class=news-card><h3>Selamat menempuh hidup baru</h3><p>Silahkan diisi siapa saja yang baru menempuh hidup baru</div></section><section class=page id=genealogy style=display:none><h2>Silahkan Geser ke kanan (agak lama) dan klik namanya</h2><div id=genealogyTree><style>#genealogyTree *{padding:0;margin:0;list-style:none}#genealogyTree .container{padding:20px;font-size:16px;margin:0 auto;overflow:auto}#genealogyTree .container ul{display:flex;opacity:0;visibility:hidden;transform:scale(0);transition:.3s visibility,.3s transform,.3s opacity}#genealogyTree .container ul li{flex:1;text-align:center;padding:0 10px;position:relative}#genealogyTree .container ul:first-child{opacity:1;visibility:visible;transform:scale(1)}#genealogyTree .container ul li input{display:none}#genealogyTree .container ul li::before{content:'';position:absolute;top:-1em;left:0;right:0;height:2px;background:#000}#genealogyTree .container ul li:first-child::before{left:50%}#genealogyTree .container ul li:last-child::before{right:50%}#genealogyTree .container ul li label{display:inline-block;padding:5px 20px;border:2px solid #000;border-radius:5px;margin-bottom:2em;position:relative;white-space:nowrap;box-sizing:border-box;user-select:none;cursor:pointer;background:#fff}#genealogyTree .container ul li label::after,#genealogyTree .container ul li label::before{content:'';width:2px;position:absolute;top:calc(-1em - 2px);height:1em;left:50%;transition:.3s all;background:#000}#genealogyTree .container ul li label::after{top:auto;bottom:calc(-1em - 2px);height:0}#genealogyTree .container ul li label:last-child::after{display:none}#genealogyTree .container>ul>li>label::before{display:none}#genealogyTree .container ul li input:checked+label{color:red}#genealogyTree .container ul li input:checked+label::after{height:1em}#genealogyTree .container ul li input:checked+label+ul{opacity:1;visibility:visible;transform:scale(1)}</style><input id=range type=range max=100 min=16 value=16><div class=container><ul><li><input id=frontend type=checkbox> <label for=frontend>Si Raja Batak</label><ul><li><input id=css type=checkbox> <label for=css>Guru Tatea Bulan (Naimarata)</label><ul><li><label>Raja Uti</label><li><input id=sariburaja type=checkbox> <label for=sariburaja>Tuan Sariburaja</label><ul><li><input id=Lontung type=checkbox> <label for=Lontung>Si Raja Lontung</label><ul><li><label><p>Seluruh keturunan Sinaga<p>Situmorang, Sitohang, Siringo-ringo, Rumapea<p>Pandiangan, Gultom, Pakpahan, Samosir, Sitinjak, Harianja<p>Seluruh keturunan Nainggolan<p>Seluruh keturunan Simatupang<p>Seluruh keturunan Aritonang<p>Seluruh keturunan Siregar</label></ul><li><input id=borbor type=checkbox> <label for=borbor>Si Raja Borbor</label><ul><li><input id=hatorusan type=checkbox> <label for=hatorusan>Tuan Hatorusan</label><ul><li><input id=balasaribu type=checkbox> <label for=balasaribu>Datu Pompang Balasaribu</label><ul><li><label>Tanjung Dolok</label><li><input id=Dibabana type=checkbox> <label for=Dibabana>Datu Tala Dibabana</label><ul><li><input id=Maima type=checkbox> <label for=Maima>Sang Maima (Datu Pulungan Tua)</label><ul><li><input id=Lubis type=checkbox> <label for=Lubis>Si Baba Lubis</label><ul><li><input id=II type=checkbox> <label for=II>Datu Pulungan Tua II</label><ul><li><input id=Angkola type=checkbox> <label for=Angkola>Janji Angkola Lubis</label><ul><li><label>Tumonggo Lubis</label><li><input id=Jobit type=checkbox> <label for=Jobit>Jobit Mangaraja Lubis</label><ul><li><input id=Pauk type=checkbox> <label for=Pauk>Namora Pauk Lubis</label><ul><li><input id=Sumodung type=checkbox> <label for=Sumodung>Tahi Sumodung Lubis</label><ul><li><input id=Bagonda type=checkbox> <label for=Bagonda>Ompu Bagonda Lubis</label><ul><li><label>Ompu Batoran Lubis</label><li><label>Ompu Mendang Lubis</label><li><input id=Songkal type=checkbox> <label for=Songkal>Ompu Songkal Lubis</label><ul><li><label>Ompu Sengkul Lubis</label><li><label>Ompu Rau Lubis</label><li><input id=Dolgi type=checkbox> <label for=Dolgi>Ompu Dolgi Lubis</label><ul><li><input id=Ondut type=checkbox> <label for=Ondut>Ompu ni Ondut Lubis</label><ul><li><label>Guru Membang Lubis</label><li><input id=Mandopa type=checkbox> <label for=Mandopa>Raja Mandopa Lubis</label><ul><li><input id=Baginda type=checkbox> <label for=Baginda>Raja Baginda Lubis</label><li><input id=Humutur type=checkbox> <label for=Humutur>Raja Humutur Lubis</label><li><input id=Philemon type=checkbox> <label for=Philemon>Raja Philemon Lubis</label><li><input id=Jonathan type=checkbox> <label for=Jonathan>Raja Jonathan Lubis</label><li><input id=Johannes type=checkbox> <label for=Johannes>Raja Johannes Lubis</label><ul><li><input id=Gideon type=checkbox> <label for=Gideon>G.Lubis / br. Pardosi</label><li><input id=Humala type=checkbox> <label for=Humala>H.Lubis / br. Silitonga</label><li><input id=Binsar type=checkbox> <label for=Binsar>B.Lubis / br. Pangaribuan / br. Siagian</label></ul></ul><li><label>Raja Lubuk Layang Lubis</label></ul></ul></ul></ul><li><label>Ompu Pulo Lubis</label></ul><li><label>Paria Saut Lubis</label><li><label>Ompu Pedong Lubis</label></ul><li><label>Tuan Sogar Lubis</label><li><label>Putta Pohan Lubis</label><li><label>Tuan Lean Lubis</label><li><label>Jumonggur Lubis</label><li><label>Manombang Laut Lubis</label></ul><li><label>Butuha Bosi Lubis</label></ul></ul><li><label>Namora Pande Bosi Lubis (merantau ke Tapsel)</label></ul></ul><li><label>Rimbang Saudara/Datu Dalu (Pasaribu)</label></ul><li><label>Raja Datubara (Batubara)</label></ul></ul><li><label>Tuan Sidamanik</label><li><label>Siaji Malim [Raja Harahap]</label><li><label>Raja Parapat</label><li><label>Raja Matondang</label><li><label>Raja Sipahutar</label><li><label>Raja Tarihoran</label><li><label>Raja Rambe</label></ul><li><label>Raja Galeam</label></ul><li><label>Limbong Maulana</label><li><label>Sagala Raja</label><li><label>Silau Raja</label></ul><li><input id=js type=checkbox> <label for=js>Raja Isombaon</label><ul><li><input id=react type=checkbox> <label for=react>Tuan Sorimangaraja</label><ul><li><input id=ambaton type=checkbox> <label for=ambaton>Nai Ambaton</label><ul><li><label>Pomparan marga Parna</label></ul><li><input id=rasaon type=checkbox> <label for=rasaon>Nai Rasaon</label><ul><li><label>Sitorus, Sirait, Butar-butar, Manurung</label></ul><li><input id=suanon type=checkbox> <label for=suanon>Nai Suanon</label><ul><li><input id=Pohan type=checkbox> <label for=Pohan>Si Bagot Ni Pohan</label><ul><li><label><p>Siahaan, Simanjuntak, Hutagaol, Nasution, Pohan<p>Tampubolon, Barimbing, Silaen<p>Panjaitan, Silitonga, Sianipar, Siagian, Pardosi<p>Simangunsong, Marpaung, Napitupulu, Pardede</label></ul><li><input id=Paet type=checkbox> <label for=Paet>Si Paet Tua</label><ul><li><label><p>Hutahaean, Hutajulu, Aruan<p>Sibarani, Sibuea, Sarumpaet<p>Pangaribuan, Hutapea</label></ul><li><input id=lahi type=checkbox> <label for=lahi>Si Lahi Sabungan</label><ul><li><label>Seluruh Silalahi dan Tambunan</label></ul><li><input id=oloan type=checkbox> <label for=oloan>Si Raja Oloan</label><ul><li><label><p>Naibaho, Sihotang, Bakkara<p>Sinambela, Sihite, Manullang</label></ul><li><label>Si Raja Huta Lima</label><li><input id=Sumba type=checkbox> <label for=Sumba>Si Raja Sumba</label><ul><li><label>Seluruh keturunan Sihombing dan Simamora</label></ul><li><input id=Sobu type=checkbox> <label for=Sobu>Si Raja Sobu</label><ul><li><label><p>Sitompul, Hasibuan, Hutabarat<p>Panggabean, Simorangkir, Hutagalung<p>Lumban Tobing, Hutapea</label></ul><li><input id=Naipospos type=checkbox> <label for=Naipospos>Si Raja Naipospos</label><ul><li><label><p>Seluruh keturunan Marbun<p>Sibagariang, Simanungkalit, Hutauruk, Situmeang</label></ul></ul></ul><li><label>Raja Asi-Asi (merantau ke Aceh)</label><li><label>Langka Somalindang (merantau ke Padang)</label></ul></div><script>document.getElementById("range").addEventListener("input",function(){document.querySelector("#genealogyTree .container").style.fontSize=this.value+"px"})</script></div></section><section class=page id=agenda style=display:none><h2>Agenda 2026 [Silahkan klik tanggalnya]</h2><div style=display:flex;justify-content:space-between;margin-bottom:12px><button id=prevMonth style="background:0 0;border:none;color:var(--accent);font-size:18px">◀</button><h3 id=monthYear style=margin:0;font-size:18px></h3><button id=nextMonth style="background:0 0;border:none;color:var(--accent);font-size:18px">▶</button></div><div id=calendarBox style="background:var(--card);padding:14px;border-radius:12px;margin-bottom:14px;border:1px solid rgba(255,255,255,.05);background-image:url(calendar.webp)"></div><div id=eventInfo></div><div class=pengumuman><i>*] Jadwal sewaktu-waktu bisa berubah</i></div></section><div class=bottom-nav><button class=bottom-btn data-bottom=gallery><b>Galeri Foto</b></button> <button class=bottom-btn data-bottom=members><b>Anggota</b></button> <button class=bottom-btn data-bottom=story><b>Sejarah</b></button></div><section class=page id=gallery style=display:none><h2>Photo Gallery</h2><button id=addPhotoBtn style="background:var(--accent);border:none;padding:10px 16px;border-radius:8px;color:#fff;margin-bottom:14px;font-size:15px">+ Masukkan Foto</button> <input id=photoInput type=file accept=image/* style=display:none><div id=galleryGrid style=display:grid;grid-template-columns:repeat(3,1fr);gap:8px></div></section><section class=page id=members style=display:none><h2>Keluarga Besar Raja Johannes Lubis</h2><div class=news-card><h3>G. Lubis / br. Pardosi</h3><p>Putra : PH. Lubis, J. Lubis, JL Lubis<p>Putri : T. br Lubis, R. br Lubis, N. br Lubis, M. br Lubis<p><br><b>PH. Lubis / br. Manalu</b><br><p>Dupak Bangunsari 7/35 Surabaya<p><br><b>J. Lubis / br. Simanjuntak</b><br><p>Jl. Pancasila No. 84 - Medan Denai<p><br><b>JL. Lubis / br. Napitupulu</b><br><p>Jl. Pancasila No. 84- Medan Denai<p><br><b>E. Simanjuntak / T. br. Lubis</b><br><p>Jl. Perumahan Pemda Jatiasih - Bekasi<p><br><b>Sitanggang / R. br. Lubis</b><br><p>Jl. Pancasila No. 84- Medan Denai<p><br><b>Sinaga / N. br. Lubis</b><br><p>Jl. Menteng Raya - Medan Denai<p><br><b>Pardede / M. br. Lubis</b><br><p>Jl. Pancasila No. 84- Medan Denai</div><div class=news-card><h3>H. Lubis / br. Silitonga</h3><p>Putra : J. Lubis, B. Lubis, T. Lubis, A. Lubis, L. Lubis<p>Putri : J. br Lubis, H. Lubis, H. Lubis<p><br><b>J. Lubis / br. Silitonga</b><br><p>Siantar - Sumatera Utara<p><br><b>B. Lubis / br. Siagian</b><br><p>Parsoburan - Tapanuli Utara<p><br><b>T. Lubis / br. Silitonga</b><br><p>Gang Haji Jihun - Pulo Gebang - Jakarta Timur<p><br><b>A. Lubis / br.</b><br><p>Batam<p><br><b>L. Lubis / br. Nainggolan</b><br><p>Pondok Ungu Permai - Bekasi<p><br><b>W. Sitorus / J. br. Lubis</b><br><p>Gang T - Cipinang Muara - Jakarta Timur<p><br><b>P. Sitorus / H. br. Lubis</b><br><p>Kampung Sawah - Bekasi<p><br><b>R. Sitorus / H. br. Lubis</b><br><p>Ciledug - Tangerang Selatan</div><div class=news-card><h3>B. Lubis / br. Pangaribuan</h3><p>Putra: H. Lubis, A. Lubis, T. Lubis<p>Putri: P. br. Lubis<p><br><b>H. Lubis / br. Tambun</b><br><p>Binjai - Sumatera Utara<p><br><b>A. Lubis / br. Siregar</b><br><p>Lumban Rau - Tapanuli Utara<p><br><b>T. Lubis / br. Simanjuntak</b><br><p>Gang Sadar III - Albaidho - Jakarta Timur<p><br><b>Pardosi / P. br. Lubis</b><br><p>Porong - Sidoarjo - Jawa Timur<h3><br>B. Lubis / br. Siagian<br></h3><p>Putra: P. Lubis, R. Lubis, T. Lubis<p>Putri: R. br. Lubis, saya lupa, saya lupa<p><br><b>P. Lubis / R. br. Pakpahan</b><br><p>Perumahan Visar - Cibinong - Bogor<p><br><b>T. Lubis / br. Butar-butar</b><br><p>Batam</div><div class=news-card><h3>Panjaitan / br. Lubis</h3><p>lupa</div><div class=news-card><h3>Pardede / br. Lubis</h3><p>lupa</div></section><section class=page id=story style=display:none><h2>Sejarah Lubis</h2><div class=news-card><h3>Kisah Raja Johannes Lubis</h3><p>Kenapa di panggil raja, karena Raja Johannes Lubis mempunyai jabatan untuk memimpin wilayah Habinsaran, kalau di jaman sekarang mungkin setara dengan Bupati. Raja Johannes merupakan anak terakhir dari Op Mandopa yang menjadi anak satu-satunya yang mempunyai kedudukan yang cukup tinggi dibandingkan abang-abangnya.</p><br><p>Raja Johannes mempunyai lae [itonya op. boru] yaitu marga Pardosi yang sama-sama mempunyai jabatan yang sama yaitu Kepala Nagari. Raja Johannes mempunyai rumah yang sangat bagus diantara semua rumah yang ada di Lumban Rau, karena mempunyai jabatan yang paling tinggi di kampung Lumban Rau.</p><br><br><p>Raja Johannes menyekolahkan anak pertama dan kedua di Jakarta, dan di jaman itu, hanya orang-orang yang mempunyai jabatan untuk bisa sekolah ke Jakarta di sekitar tahun 1930an. Raja Johannes menikah dengan op. boru Pardosi yang berasal dari kampung Parsoburan.</p><br></div></section><script>// Page switching for top navbar
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="server.js"></script>
+  <title>Mobile App Responsive</title>
+  <style>
+:root{
+  --bg:#ffffff; /* body background */
+  --card:#e6e6e6; /* card background */
+  --accent:#d40606; /* keep accent color */
+  --muted:#374151; /* muted text for light background */
+  --glass: rgba(0,0,0,0.03);
+  --nav-h:62px;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:#111; /* main text color */
+}
+
+/* Beranda */  
+.reaction-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.reaction-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.comment-box {
+  margin-top: 10px;
+}
+
+.comment-item {
+  background: #f5f5f5;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+}
+
+.comment-submit {
+  margin-top: 4px;
+  padding: 4px 10px;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Top navbar */
+.top-nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:var(--nav-h);
+  display:flex; justify-content:space-around; align-items:center;
+  background:url('bg-button.webp');
+  z-index:999;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.top-nav button{
+  background:none; color:var(--muted); border:none; font-size:15px; padding:8px;
+}
+.top-nav button.active{color:var(--accent)}
+
+/* Bottom navbar */
+.bottom-nav{
+  position:fixed; bottom:0; left:0; right:0;
+  height:var(--nav-h);
+  display:flex; justify-content:space-around; align-items:center;
+  background:url('bg-button.webp');
+  z-index:999;
+  border-top:1px solid rgba(0,0,0,0.1);
+}
+.bottom-nav button{
+  background:none; color:var(--muted); border:none; font-size:15px; padding:8px;
+}
+.bottom-nav button.active{color:var(--accent)}
+
+/* Main area spacing */
+main{padding:80px 14px 80px}
+
+/* Carousel */
+.carousel{position:relative; overflow:hidden; border-radius:14px; height:200px; margin-bottom:20px}
+.slides{display:flex; transition:0.4s ease}
+.slide{min-width:100%; height:200px; display:flex; justify-content:center; align-items:center; font-size:20px; font-weight:700; color:white; text-shadow: 2px 2px black;}
+.s1{
+  background:url('Rj-Mandopa.webp')
+}
+.s2{
+  background:url('hkbp.webp')
+}
+.s3{
+  background:url('family.webp')
+}
+
+.dots{display:flex; justify-content:center; gap:6px; margin-top:10px}
+.dot{width:10px; height:10px; border-radius:50%; background:#ccc}
+.dot.active{background:#111}
+
+/* News cards */
+.news-card{
+  background:var(--card);
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:14px;
+  border: 10px solid transparent;
+  border-image-source: url("cards.webp");
+  border-image-slice: 20;
+  border-image-repeat: stretch; /* or round */
+}
+.news-card h3{margin:0 0 6px; font-size:17px; color:#111}
+.news-card p{margin:0; color:var(--muted); font-size:14px}
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <div class="top-nav">
+    <button class="top-btn active" data-page="home"><b>Beranda</b></button>
+    <button class="top-btn" data-page="genealogy"><b>Tarombo</b></button>
+    <button class="top-btn" data-page="agenda"><b>Agenda</b></button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="content">
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page">
+      <div class="carousel" id="carousel">
+        <div class="slides" id="slideTrack">
+          <div class="slide s1">Horas... Shalom... Keluarga Lubis memang keren</div>
+          <div class="slide s2">Tugu Lubis</div>
+          <div class="slide s3">Keluarga besar Raja Johannes Lubis</div>
+        </div>
+      </div>
+      <div class="dots" id="dots"></div>
+
+      <!-- News Cards -->
+      <div class="news-card">
+        <h3>Turut Berduka Cita</h3>
+        <p>Seluruh Keluarga Raja Johannes Lubis berduka cita atas meninggalnya mama Mora (br. Nainggolan) pada tanggal 20 Nov 2025.</p>
+      </div>
+
+      <div class="news-card">
+        <h3>Selamat Ulang Tahun</h3>
+        <p>Silahkan isi siapa yang ulang tahun di bulan Desember</p>
+      </div>
+
+      <div class="news-card">
+        <h3>Selamat menempuh hidup baru</h3>
+        <p>Silahkan diisi siapa saja yang baru menempuh hidup baru</p>
+      </div>
+    </section>
+
+<!-- GENEALOGY PAGE -->
+<section id="genealogy" class="page" style="display:none">
+  <h2>Silahkan Geser ke kanan (agak lama) dan klik namanya</h2>
+
+  <!-- ================== INSERTED GENEALOGY TREE CODE ================== -->
+  <div id="genealogyTree">
+
+    <style>
+      #genealogyTree * {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+      }
+
+      #genealogyTree .container {
+          padding: 20px;
+          font-size: 16px;
+          margin: 0 auto;
+          overflow: auto;
+      }
+
+      #genealogyTree .container ul {
+          display: flex;
+          opacity: 0;
+          visibility: hidden;
+          transform: scale(0);
+          transition: 300ms visibility, 300ms transform, 300ms opacity;
+      }
+
+      #genealogyTree .container ul li {
+          flex: 1;
+          text-align: center;
+          padding: 0 10px;
+          position: relative;
+      }
+
+      #genealogyTree .container ul:first-child {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+      }
+
+      #genealogyTree .container ul li input {
+          display: none;
+      }
+
+      #genealogyTree .container ul li::before {
+          content: '';
+          position: absolute;
+          top: -1em;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #000;
+      }
+
+      #genealogyTree .container ul li:first-child::before {
+          left: 50%;
+      }
+
+      #genealogyTree .container ul li:last-child::before {
+          right: 50%;
+      }
+
+      #genealogyTree .container ul li label {
+          display: inline-block;
+          padding: 5px 20px;
+          border: 2px solid #000;
+          border-radius: 5px;
+          margin-bottom: 2em;
+          position: relative;
+          white-space: nowrap;
+          box-sizing: border-box;
+          user-select: none;
+          cursor: pointer;
+          background:#fff;
+      }
+
+      #genealogyTree .container ul li label::after,
+      #genealogyTree .container ul li label::before {
+          content: '';
+          width: 2px;
+          position: absolute;
+          top: calc(-1em - 2px);
+          height: 1em;
+          left: 50%;
+          transition: 300ms all;
+          background: #000;
+      }
+
+      #genealogyTree .container ul li label::after {
+          top: auto;
+          bottom: calc(-1em - 2px);
+          height: 0;
+      }
+
+      #genealogyTree .container ul li label:last-child::after {
+          display: none;
+      }
+
+      #genealogyTree .container >ul >li >label::before {
+          display: none;
+      }
+
+      #genealogyTree .container ul li input:checked + label {
+          color: rgb(255, 0, 0);
+      }
+
+      #genealogyTree .container ul li input:checked + label::after {
+          height: 1em;
+      }
+
+      #genealogyTree .container ul li input:checked + label + ul {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+      }
+
+      
+    </style>
+
+    <input type="range" min="16" max="100" value="16" id="range">
+
+    <div class="container">
+        <ul>
+            <li>
+                <input type="checkbox" id="frontend">
+                <label for="frontend">Si Raja Batak</label>
+                <ul>
+                    <li>
+                         <input type="checkbox" id="css">
+                         <label for="css">Guru Tatea Bulan (Naimarata)</label>
+                          <ul>
+                              <li>
+                                   <label>Raja Uti</label>
+                              </li>
+                              <li>
+                                   <input type="checkbox" id="sariburaja">
+                                   <label for="sariburaja">Tuan Sariburaja</label>
+                                   <ul>
+                                       <li>
+                                        <input type="checkbox" id="Lontung">
+                                        <label for="Lontung">Si Raja Lontung</label>
+                                          <ul>
+                                                 <li>
+                                                     <label><p>Seluruh keturunan Sinaga</p>
+                                                            <p>Situmorang, Sitohang, Siringo-ringo, Rumapea</p> 
+                                                            <p>Pandiangan, Gultom, Pakpahan, Samosir, Sitinjak, Harianja</p> 
+                                                            <p>Seluruh keturunan Nainggolan</p> 
+                                                            <p>Seluruh keturunan Simatupang</p> 
+                                                            <p>Seluruh keturunan Aritonang</p> 
+                                                            <p>Seluruh keturunan Siregar</p> 
+                                                          </label>
+                                                </li>
+                                          </ul>
+                                       </li>   
+                                       <li>
+                                        <input type="checkbox" id="borbor">
+                                        <label for="borbor">Si Raja Borbor</label>
+                                        <ul>
+                                          <li>
+                                              <input type="checkbox" id="hatorusan">
+                                              <label for="hatorusan">Tuan Hatorusan</label>
+                                           <ul>
+                                                <li>
+                                                     <input type="checkbox" id="balasaribu">
+                                                     <label for="balasaribu">Datu Pompang Balasaribu</label>
+                                                     <ul>
+                                                          <li>
+                                                               <label>Tanjung Dolok</label>
+                                                        </li>
+                                                        <li>
+                                                               <input type="checkbox" id="Dibabana">
+                                                               <label for="Dibabana">Datu Tala Dibabana</label>
+                                                               <ul>
+                                                                   <li>
+                                                                    <input type="checkbox" id="Maima">
+                                                                    <label for="Maima">Sang Maima (Datu Pulungan Tua)</label>
+                                                                    <ul>
+                                                                        <li>
+                                                                             <input type="checkbox" id="Lubis">
+                                                                             <label for="Lubis">Si Baba Lubis</label>
+                                                                             <ul>
+                                                                                 <li>
+                                                                                       <input type="checkbox" id="II">
+                                                                                       <label for="II">Datu Pulungan Tua II</label>
+                                                                                       <ul>
+                                                                                           <li>
+                                                                                                <input type="checkbox" id="Angkola">
+                                                                                                <label for="Angkola">Janji Angkola Lubis</label>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                         <label>Tumonggo Lubis</label>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                         <input type="checkbox" id="Jobit">
+                                                                                                         <label for="Jobit">Jobit Mangaraja Lubis</label>
+                                                                                                         <ul>
+                                                                                                             <li>
+                                                                                                                  <input type="checkbox" id="Pauk">
+                                                                                                                  <label for="Pauk">Namora Pauk Lubis</label>
+                                                                                                                   <ul>
+                                                                                                                       <li>
+                                                                                                                           <input type="checkbox" id="Sumodung">
+                                                                                                                           <label for="Sumodung">Tahi Sumodung Lubis</label>
+                                                                                                                           <ul>
+                                                                                                                              <li>
+                                                                                                                                   <input type="checkbox" id="Bagonda">
+                                                                                                                                   <label for="Bagonda">Ompu Bagonda Lubis</label>
+                                                                                                                                   <ul>
+                                                                                                                                       <li>
+                                                                                                                                           <label>Ompu Batoran Lubis</label>
+                                                                                                                                       </li>
+                                                                                                                                       <li>
+                                                                                                                                           <label>Ompu Mendang Lubis</label>
+                                                                                                                                       </li>
+                                                                                                                                       <li>
+                                                                                                                                           <input type="checkbox" id="Songkal">
+                                                                                                                                           <label for="Songkal">Ompu Songkal Lubis</label>
+                                                                                                                                           <ul>
+                                                                                                                                               <li>
+                                                                                                                                                   <label>Ompu Sengkul Lubis</label>
+                                                                                                                                               </li>
+                                                                                                                                               <li>
+                                                                                                                                                   <label>Ompu Rau Lubis</label>
+                                                                                                                                               </li>
+                                                                                                                                               <li>
+                                                                                                                                                   <input type="checkbox" id="Dolgi">
+                                                                                                                                                   <label for="Dolgi">Ompu Dolgi Lubis</label>
+                                                                                                                                                   <ul>
+                                                                                                                                                      <li>
+                                                                                                                                                          <input type="checkbox" id="Ondut">
+                                                                                                                                                          <label for="Ondut">Ompu ni Ondut Lubis</label>
+                                                                                                                                                           <ul>
+                                                                                                                                                               <li>
+                                                                                                                                                                   <label>Guru Membang Lubis</label>
+                                                                                                                                                               </li>
+                                                                                                                                                               <li>
+                                                                                                                                                                   <input type="checkbox" id="Mandopa">
+                                                                                                                                                                   <label for="Mandopa">Raja Mandopa Lubis</label>
+                                                                                                                                                                    <ul>
+                                                                                                                                                                        <li>
+                                                                                                                                                                             <input type="checkbox" id="Baginda">
+                                                                                                                                                                             <label for="Baginda">Raja Baginda Lubis</label>
+                                                                                                                                                                        </li>
+                                                                                                                                                                        <li>
+                                                                                                                                                                             <input type="checkbox" id="Humutur">
+                                                                                                                                                                             <label for="Humutur">Raja Humutur Lubis</label>
+                                                                                                                                                                        </li>
+                                                                                                                                                                        <li>
+                                                                                                                                                                             <input type="checkbox" id="Philemon">
+                                                                                                                                                                             <label for="Philemon">Raja Philemon Lubis</label>
+                                                                                                                                                                        </li>
+                                                                                                                                                                        <li>
+                                                                                                                                                                             <input type="checkbox" id="Jonathan">
+                                                                                                                                                                             <label for="Jonathan">Raja Jonathan Lubis</label>
+                                                                                                                                                                        </li>
+                                                                                                                                                                        <li>
+                                                                                                                                                                             <input type="checkbox" id="Johannes">
+                                                                                                                                                                             <label for="Johannes">Raja Johannes Lubis</label>
+                                                                                                                                                                              <ul>
+                                                                                                                                                                                 <li>
+                                                                                                                                                                                     <input type="checkbox" id="Gideon">
+                                                                                                                                                                                     <label for="Gideon">G.Lubis / br. Pardosi</label>
+                                                                                                                                                                                 </li>
+                                                                                                                                                                                 <li>
+                                                                                                                                                                                     <input type="checkbox" id="Humala">
+                                                                                                                                                                                     <label for="Humala">H.Lubis / br. Silitonga</label>
+                                                                                                                                                                                 </li>
+                                                                                                                                                                                 <li>
+                                                                                                                                                                                     <input type="checkbox" id="Binsar">
+                                                                                                                                                                                     <label for="Binsar">B.Lubis / br. Pangaribuan / br. Siagian</label>
+                                                                                                                                                                                 </li>
+                                                                                                                                                                              </ul>
+                                                                                                                                                                        </li>
+                                                                                                                                                                    </ul>
+                                                                                                                                                               </li>
+                                                                                                                                                               <li>
+                                                                                                                                                                   <label>Raja Lubuk Layang Lubis</label>
+                                                                                                                                                               </li>
+                                                                                                                                                           </ul>
+                                                                                                                                                      </li>
+                                                                                                                                                   </ul>
+                                                                                                                                               </li>
+                                                                                                                                           </ul>
+                                                                                                                                       </li>
+
+                                                                                                                                   </ul>
+                                                                                                                              </li>
+                                                                                                                              <li>
+                                                                                                                                    <label>Ompu Pulo Lubis</label>
+                                                                                                                              </li>
+                                                                                                                           </ul>
+                                                                                                                       </li>
+                                                                                                                       <li>
+                                                                                                                            <label>Paria Saut Lubis</label>
+                                                                                                                       </li>
+                                                                                                                       <li>
+                                                                                                                            <label>Ompu Pedong Lubis</label>
+                                                                                                                       </li>
+                                                                                                                   </ul>
+                                                                                                             </li>
+                                                                                                             <li>
+                                                                                                                  <label>Tuan Sogar Lubis</label>
+                                                                                                             </li>
+                                                                                                             <li>
+                                                                                                                  <label>Putta Pohan Lubis</label>
+                                                                                                             </li>
+                                                                                                             <li>
+                                                                                                                  <label>Tuan Lean Lubis</label>
+                                                                                                             </li>
+                                                                                                             <li>
+                                                                                                                  <label>Jumonggur Lubis</label>
+                                                                                                             </li>
+                                                                                                             <li>
+                                                                                                                  <label>Manombang Laut Lubis</label>
+                                                                                                             </li>
+                                                                                                         </ul>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                         <label>Butuha Bosi Lubis</label>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                           </li>
+                                                                                       </ul>
+                                                                                 </li>
+                                                                                 <li>
+                                                                                       <label>Namora Pande Bosi Lubis (merantau ke Tapsel) </label>
+                                                                                 </li>
+                                                                             </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                  </li>
+                                                                  <li>
+                                                                    <label>Rimbang Saudara/Datu Dalu (Pasaribu) </label>
+                                                                  </li>
+                                                              </ul>
+                                                        </li>
+                                                        <li>
+                                                               <label>Raja Datubara (Batubara) </label>
+                                                        </li>
+                                                     </ul>
+                                                </li>
+                                           </ul>
+                                      </li>
+                                      <li>
+                                          <label>Tuan Sidamanik</label>
+                                      </li>
+                                      <li>
+                                          <label>Siaji Malim [Raja Harahap]</label>
+                                      </li>
+                                      <li>
+                                          <label>Raja Parapat</label>
+                                      </li>
+                                      <li>
+                                          <label>Raja Matondang</label>
+                                      </li>
+                                      <li>
+                                          <label>Raja Sipahutar</label>
+                                      </li>
+                                      <li>
+                                          <label>Raja Tarihoran</label>
+                                      </li>
+                                      <li>
+                                          <label>Raja Rambe</label>
+                                      </li>
+                                          </li>
+                                        </ul>
+                                       </li>   
+                                       <li>
+                                        <label>Raja Galeam</label>
+                                       </li>  
+                                  </ul>
+                              </li>
+                              <li>
+                                   <label>Limbong Maulana</label>
+                             </li>
+                             <li>
+                                   <label>Sagala Raja</label>
+                             </li>
+                             <li>
+                                   <label>Silau Raja</label>
+                             </li>
+                          </ul>
+                    </li>
+              <li>
+                  <input type="checkbox" id="js">
+                  <label for="js">Raja Isombaon</label>
+                  <ul>
+                      <li>
+                           <input type="checkbox" id="react">
+                           <label for="react">Tuan Sorimangaraja</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="ambaton">
+                                    <label for="ambaton">Nai Ambaton </label>
+                                    <ul>
+                                        <li>
+                                             <label>Pomparan marga Parna</label>
+                                       </li>
+                                    </ul>
+                               </li>
+                                <li>
+                                    <input type="checkbox" id="rasaon">
+                                    <label for="rasaon">Nai Rasaon</label>
+                                    <ul>
+                                        <li>
+                                             <label>Sitorus, Sirait, Butar-butar, Manurung</label>
+                                       </li>
+                                    </ul>
+                                </li>
+                                 <li>
+                                    <input type="checkbox" id="suanon">
+                                    <label for="suanon">Nai Suanon</label>
+                                    <ul>
+                                        <li>
+                                             <input type="checkbox" id="Pohan">
+                                             <label for="Pohan">Si Bagot Ni Pohan</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Siahaan, Simanjuntak, Hutagaol, Nasution, Pohan</p>
+                                                            <p>Tampubolon, Barimbing, Silaen</p> 
+                                                            <p>Panjaitan, Silitonga, Sianipar, Siagian, Pardosi</p> 
+                                                            <p>Simangunsong, Marpaung, Napitupulu, Pardede</p> 
+                                                          </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Paet">
+                                             <label for="Paet">Si Paet Tua</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Hutahaean, Hutajulu, Aruan</p>
+                                                            <p>Sibarani, Sibuea, Sarumpaet</p> 
+                                                            <p>Pangaribuan, Hutapea</p> 
+                                                    </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="lahi">
+                                             <label for="lahi">Si Lahi Sabungan</label>
+                                             <ul>
+                                                 <li>
+                                                     <label>Seluruh Silalahi dan Tambunan</label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="oloan">
+                                             <label for="oloan">Si Raja Oloan</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Naibaho, Sihotang, Bakkara</p>
+                                                            <p>Sinambela, Sihite, Manullang</p>
+                                                     </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <label>Si Raja Huta Lima</label>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Sumba">
+                                             <label for="Sumba">Si Raja Sumba</label>
+                                             <ul>
+                                                 <li>
+                                                     <label>Seluruh keturunan Sihombing dan Simamora</label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Sobu">
+                                             <label for="Sobu">Si Raja Sobu</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Sitompul, Hasibuan, Hutabarat</p>
+                                                            <p>Panggabean, Simorangkir, Hutagalung</p>
+                                                            <p>Lumban Tobing, Hutapea</p>
+                                                    </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                       <li>
+                                             <input type="checkbox" id="Naipospos">
+                                             <label for="Naipospos">Si Raja Naipospos</label>
+                                             <ul>
+                                                 <li>
+                                                     <label><p>Seluruh keturunan Marbun</p>
+                                                            <p>Sibagariang, Simanungkalit, Hutauruk, Situmeang</p>
+                                                     </label>
+                                                </li>
+                                             </ul>
+                                       </li>
+                                    </ul>
+                                </li>
+                                </li>
+                            </ul>
+                      </li>
+                      <li>
+                           <label>Raja Asi-Asi (merantau ke Aceh)</label>
+                      </li>
+                       <li>
+                          <label>Langka Somalindang (merantau ke Padang)</label>
+                       </li>
+                   </ul>
+            </li>
+                </ul>
+            </li>
+        </ul>
+  </div>
+
+    <script>
+      document.getElementById('range').addEventListener('input', function () {
+          document.querySelector('#genealogyTree .container').style.fontSize = this.value + 'px';
+      });
+    </script>
+
+  </div>
+  <!-- ================== END INSERTED CODE ================== -->
+
+</section>
+
+    <!-- AGENDA PAGE -->
+<section id="agenda" class="page" style="display:none">
+  <h2>Agenda 2026 [Silahkan klik tanggalnya]</h2>
+
+  <!-- Month Selector -->
+  <div style="
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+  ">
+    <button id="prevMonth" style="background:none; border:none; color:var(--accent); font-size:18px;">◀</button>
+    <h3 id="monthYear" style="margin:0; font-size:18px;"></h3>
+    <button id="nextMonth" style="background:none; border:none; color:var(--accent); font-size:18px;">▶</button>
+  </div>
+
+
+  <!-- Calendar Box -->
+  <div id="calendarBox" style="
+    background:var(--card);
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:14px;
+    border:1px solid rgba(255,255,255,0.05);
+    background-image: url('calendar.webp');
+  "></div>
+
+  <!-- Event Info -->
+  <div id="eventInfo"></div>
+
+  <div class="pengumuman"><i>*] Jadwal sewaktu-waktu bisa berubah</i></div>
+</section>
+
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <button class="bottom-btn" data-bottom="gallery"><b>Galeri Foto</b></button>
+    <button class="bottom-btn" data-bottom="members"><b>Anggota</b></button>
+    <button class="bottom-btn" data-bottom="story"><b>Sejarah</b></button>
+  </div>
+  
+  <!-- PHOTO GALLERY PAGE -->
+<section id="gallery" class="page" style="display:none">
+
+  <h2>Photo Gallery</h2>
+
+  <!-- Add Photo Button -->
+  <button id="addPhotoBtn" style="
+      background:var(--accent);
+      border:none;
+      padding:10px 16px;
+      border-radius:8px;
+      color:#fff;
+      margin-bottom:14px;
+      font-size:15px;
+  ">+ Masukkan Foto</button>
+
+  <!-- Hidden file picker -->
+  <input type="file" id="photoInput" accept="image/*" style="display:none">
+
+  <!-- Gallery grid -->
+  <div id="galleryGrid" style="
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+  "></div>
+</section>
+
+
+<!-- FAMILY MEMBERS PAGE -->
+<section id="members" class="page" style="display:none">
+
+  <h2>Keluarga Besar Raja Johannes Lubis</h2>
+
+  <div class="news-card">
+    <h3>G. Lubis / br. Pardosi</h3>
+    <p>Putra : PH. Lubis, J. Lubis, JL Lubis</p>
+    <p>Putri : T. br Lubis, R. br Lubis, N. br Lubis, M. br Lubis</p>
+    <p><br><b>PH. Lubis / br. Manalu</b></br></p>
+    <p>Dupak Bangunsari 7/35 Surabaya</p>
+    <p><br><b>J. Lubis / br. Simanjuntak</b></br></p>
+    <p>Jl. Pancasila No. 84 - Medan Denai</p>
+    <p><br><b>JL. Lubis / br. Napitupulu</b></br></p>
+    <p>Jl. Pancasila No. 84- Medan Denai</p>
+    <p><br><b>E. Simanjuntak / T. br. Lubis</b></br></p>
+    <p>Jl. Perumahan Pemda Jatiasih - Bekasi</p>
+    <p><br><b>Sitanggang / R. br. Lubis</b></br></p>
+    <p>Jl. Pancasila No. 84- Medan Denai</p>
+    <p><br><b>Sinaga / N. br. Lubis</b></br></p>
+    <p>Jl. Menteng Raya - Medan Denai</p>
+    <p><br><b>Pardede / M. br. Lubis</b></br></p>
+    <p>Jl. Pancasila No. 84- Medan Denai</p>
+
+  </div>
+
+  <div class="news-card">
+    <h3>H. Lubis / br. Silitonga</h3>
+    <p>Putra : J. Lubis, B. Lubis, T. Lubis, A. Lubis, L. Lubis</p>
+    <p>Putri : J. br Lubis, H. Lubis, H. Lubis</p>
+    <p><br><b>J. Lubis / br. Silitonga</b></br></p>
+    <p>Siantar - Sumatera Utara</p>
+    <p><br><b>B. Lubis / br. Siagian</b></br></p>
+    <p>Parsoburan - Tapanuli Utara</p>
+    <p><br><b>T. Lubis / br. Silitonga</b></br></p>
+    <p>Gang Haji Jihun - Pulo Gebang - Jakarta Timur</p>
+    <p><br><b>A. Lubis / br. </b></br></p>
+    <p>Batam</p>
+    <p><br><b>L. Lubis / br. Nainggolan</b></br></p>
+    <p>Pondok Ungu Permai - Bekasi</p>
+    <p><br><b>W. Sitorus / J. br. Lubis</b></br></p>
+    <p>Gang T - Cipinang Muara - Jakarta Timur</p>
+    <p><br><b>P. Sitorus / H. br. Lubis</b></br></p>
+    <p>Kampung Sawah - Bekasi</p>
+    <p><br><b>R. Sitorus / H. br. Lubis</b></br></p>
+    <p>Ciledug - Tangerang Selatan</p>
+  </div>
+
+  <div class="news-card">
+    <h3>B. Lubis / br. Pangaribuan</h3>
+    <p>Putra: H. Lubis, A. Lubis, T. Lubis</p>
+    <p>Putri: P. br. Lubis</p>
+    <p><br><b>H. Lubis / br. Tambun</b></br></p>
+    <p>Binjai - Sumatera Utara</p>
+    <p><br><b>A. Lubis / br. Siregar</b></br></p>
+    <p>Lumban Rau - Tapanuli Utara</p>
+    <p><br><b>T. Lubis / br. Simanjuntak</b></br></p>
+    <p>Gang Sadar III - Albaidho - Jakarta Timur</p>
+    <p><br><b>Pardosi / P. br. Lubis</b></br></p>
+    <p>Porong - Sidoarjo - Jawa Timur</p>
+
+    <h3><br>B. Lubis / br. Siagian</br></h3>
+    <p>Putra: P. Lubis, R. Lubis, T. Lubis</p>
+    <p>Putri: R. br. Lubis, saya lupa, saya lupa</p>
+    <p><br><b>P. Lubis / R. br. Pakpahan</b></br></p>
+    <p>Perumahan Visar - Cibinong - Bogor</p>
+    <p><br><b>T. Lubis / br. Butar-butar</b></br></p>
+    <p>Batam</p>
+  </div>
+
+  <div class="news-card">
+    <h3>Panjaitan / br. Lubis</h3>
+    <p>lupa</p>
+  </div>
+
+  <div class="news-card">
+    <h3>Pardede / br. Lubis</h3>
+    <p>lupa</p>
+  </div>
+
+</section>
+
+<section id="story" class="page" style="display:none">
+
+  <h2>Sejarah Lubis</h2>
+
+  <div class="news-card">
+    <h3>Kisah Raja Johannes Lubis</h3>
+    <p>Kenapa di panggil raja, karena Raja Johannes Lubis mempunyai jabatan untuk memimpin wilayah Habinsaran, kalau di jaman sekarang mungkin setara dengan Bupati. Raja Johannes merupakan anak terakhir dari Op Mandopa yang menjadi anak satu-satunya yang mempunyai kedudukan yang cukup tinggi dibandingkan abang-abangnya. </p>
+    <br><p>Raja Johannes mempunyai lae [itonya op. boru] yaitu marga Pardosi yang sama-sama mempunyai jabatan yang sama yaitu Kepala Nagari. Raja Johannes mempunyai rumah yang sangat bagus diantara semua rumah yang ada di Lumban Rau, karena mempunyai jabatan yang paling tinggi di kampung Lumban Rau.</p></br>
+    <br><p>Raja Johannes menyekolahkan anak pertama dan kedua di Jakarta, dan di jaman itu, hanya orang-orang yang mempunyai jabatan untuk bisa sekolah ke Jakarta di sekitar tahun 1930an. Raja Johannes menikah dengan op. boru Pardosi yang berasal dari kampung Parsoburan.</p></br>
+  </div>
+
+</section>
+
+<script>
+// Page switching for top navbar
 const pages = document.querySelectorAll('.page');
 const topBtns = document.querySelectorAll('.top-btn');
 
@@ -37,7 +899,11 @@ function update(){
   [...dots.children].forEach((d,i)=>d.classList.toggle('active', i===idx));
 }
 function goTo(i){idx=i; update();}
-setInterval(()=>{idx=(idx+1)%total; update();},4000);</script><script>// -------------------- AGENDA CALENDAR 2026 --------------------
+setInterval(()=>{idx=(idx+1)%total; update();},4000);
+</script>
+
+<script>
+// -------------------- AGENDA CALENDAR 2026 --------------------
 
 const calendarBox = document.getElementById("calendarBox");
 const monthYear = document.getElementById("monthYear");
@@ -126,7 +992,12 @@ document.getElementById("nextMonth").onclick = () => {
 };
 
 // Initial load
-renderCalendar();</script><script>// ----------- PHOTO GALLERY ADD PHOTO SYSTEM -----------
+renderCalendar();
+</script>
+
+
+<script>
+// ----------- PHOTO GALLERY ADD PHOTO SYSTEM -----------
 
 const galleryGrid = document.getElementById("galleryGrid");
 const addPhotoBtn = document.getElementById("addPhotoBtn");
@@ -152,89 +1023,159 @@ function renderGallery() {
   galleryGrid.innerHTML = photos
     .map(src => `<img src="${src}" style="width:100%; border-radius:8px;">`)
     .join("");
-}</script><script>document.querySelectorAll('.news-card').forEach((card, index) => {
-  const cardId = `news-card-${index}`;
+}
+</script>
 
-  // Load stored data from localStorage
-  const storedData = JSON.parse(localStorage.getItem(cardId)) || {
-    reactions: Array(8).fill(0),
-    comments: []
+
+<script type="module">
+  // --- IMPORT FIREBASE ---
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  import { 
+    getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion 
+  } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+  // --- YOUR FIREBASE CONFIG ---
+  const firebaseConfig = {
+    apiKey: "AIzaSyCF...YOUR KEY...",
+    authDomain: "rajajohannes-4d7f7.firebaseapp.com",
+    projectId: "rajajohannes-4d7f7",
+    storageBucket: "rajajohannes-4d7f7.firebasestorage.app",
+    messagingSenderId: "3042823334768",
+    appId: "1:3042823334768:web:b5acb4fa1ff58600479ff5"
   };
 
-  // --- REACTIONS ---
-  const reactionBar = document.createElement('div');
-  reactionBar.className = 'reaction-bar';
-  const emojis = [
-    {icon:'❤️', name:'Love'}, 
-    {icon:'👍', name:'Like'},
-    {icon:'👎', name:'Dislike'},
-    {icon:'🙏', name:'Apology'},
-    {icon:'😲', name:'Amazed'},
-    {icon:'😄', name:'Laugh'},
-    {icon:'🎉', name:'Party'},
-    {icon:'😭', name:'Cry'}
-  ];
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-  emojis.forEach((e, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'reaction-btn';
-    let count = storedData.reactions[i] || 0;
-    btn.innerText = `${e.icon} ${count}`;
-    
-    btn.onclick = () => {
-      count++;
-      storedData.reactions[i] = count;
+  // --------------------------
+  // MAIN SCRIPT
+  // --------------------------
+  document.querySelectorAll('.news-card').forEach(async (card, index) => {
+    const cardId = `news-${index}`;
+    const ref = doc(db, "news", cardId);
+
+    // Load Firestore data
+    let snap = await getDoc(ref);
+    if (!snap.exists()) {
+      await setDoc(ref, { reactions: Array(8).fill(0), comments: [] });
+      snap = await getDoc(ref);
+    }
+    let storedData = snap.data();
+
+    // --- REACTIONS ---
+    const reactionBar = document.createElement('div');
+    reactionBar.className = 'reaction-bar';
+
+    const emojis = [
+      {icon:'❤️'}, {icon:'👍'}, {icon:'👎'}, {icon:'🙏'},
+      {icon:'😲'}, {icon:'😄'}, {icon:'🎉'}, {icon:'😭'}
+    ];
+
+    emojis.forEach((e, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'reaction-btn';
+
+      let count = storedData.reactions[i];
       btn.innerText = `${e.icon} ${count}`;
-      localStorage.setItem(cardId, JSON.stringify(storedData));
+
+      btn.onclick = async () => {
+        count++;
+        storedData.reactions[i] = count;
+        btn.innerText = `${e.icon} ${count}`;
+        await updateDoc(ref, { reactions: storedData.reactions });
+      };
+
+      reactionBar.appendChild(btn);
+    });
+
+    card.appendChild(reactionBar);
+
+    // --- COMMENTS ---
+    const commentBox = document.createElement('div');
+    commentBox.className = 'comment-box';
+    commentBox.innerHTML = `
+      <input type="text" placeholder="Nama Anda" class="comment-input name" />
+      <input type="text" placeholder="Tulis komentar..." class="comment-input comment" />
+      <button class="comment-submit">Kirim</button>
+      <div class="comment-list"></div>
+    `;
+    card.appendChild(commentBox);
+
+    const nameInput = commentBox.querySelector('.name');
+    const commentInput = commentBox.querySelector('.comment');
+    const commentList = commentBox.querySelector('.comment-list');
+    const submitBtn = commentBox.querySelector('.comment-submit');
+
+    // Load comments
+    storedData.comments.forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'comment-item';
+      div.innerHTML = `<b>${c.name}:</b> ${c.text}`;
+      commentList.appendChild(div);
+    });
+
+    const addComment = async () => {
+      if (!nameInput.value || !commentInput.value) return;
+
+      const comment = { name: nameInput.value, text: commentInput.value };
+      
+      // Add to UI
+      const div = document.createElement('div');
+      div.className = 'comment-item';
+      div.innerHTML = `<b>${comment.name}:</b> ${comment.text}`;
+      commentList.appendChild(div);
+
+      // Save to Firestore
+      await updateDoc(ref, {
+        comments: arrayUnion(comment)
+      });
+
+      nameInput.value = '';
+      commentInput.value = '';
     };
-    reactionBar.appendChild(btn);
-  });
 
-  card.appendChild(reactionBar);
-
-  // --- COMMENTS ---
-  const commentBox = document.createElement('div');
-  commentBox.className = 'comment-box';
-  commentBox.innerHTML = `
-    <input type="text" placeholder="Nama Anda" class="comment-input name" />
-    <input type="text" placeholder="Tulis komentar..." class="comment-input comment" />
-    <button class="comment-submit">Kirim</button>
-    <div class="comment-list"></div>
-  `;
-  card.appendChild(commentBox);
-
-  const submitBtn = commentBox.querySelector('.comment-submit');
-  const nameInput = commentBox.querySelector('.name');
-  const commentInput = commentBox.querySelector('.comment');
-  const commentList = commentBox.querySelector('.comment-list');
-
-  // Load stored comments
-  storedData.comments.forEach(c => {
-    const commentItem = document.createElement('div');
-    commentItem.className = 'comment-item';
-    commentItem.innerHTML = `<b>${c.name}:</b> ${c.text}`;
-    commentList.appendChild(commentItem);
-  });
-
-  const addComment = () => {
-    if (!nameInput.value || !commentInput.value) return;
-    const commentItem = document.createElement('div');
-    commentItem.className = 'comment-item';
-    commentItem.innerHTML = `<b>${nameInput.value}:</b> ${commentInput.value}`;
-    commentList.appendChild(commentItem);
-    commentList.scrollTop = commentList.scrollHeight;
-
-    // Save to localStorage
-    storedData.comments.push({name: nameInput.value, text: commentInput.value});
-    localStorage.setItem(cardId, JSON.stringify(storedData));
-
-    commentInput.value = '';
-  };
-
-  submitBtn.onclick = addComment;
-  [nameInput, commentInput].forEach(input => {
-    input.addEventListener('keypress', e => {
-      if (e.key === 'Enter') addComment();
+    submitBtn.onclick = addComment;
+    [nameInput, commentInput].forEach(input => {
+      input.addEventListener('keypress', e => {
+        if (e.key === 'Enter') addComment();
+      });
     });
   });
-});</script>
+</script>
+
+
+<script type="module">
+  // Import Firebase SDKs from CDN
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs }
+    from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+  // Your config
+  const firebaseConfig = {
+    apiKey: "AIzaSyCF...",
+    authDomain: "rajajohannes-4d7f7.firebaseapp.com",
+    projectId: "rajajohannes-4d7f7",
+    storageBucket: "rajajohannes-4d7f7.firebasestorage.app",
+    messagingSenderId: "3042823334768",
+    appId: "1:3042823334768:web:b5acb4fa1ff58600479ff5"
+  };
+
+  // Initialize Firebase + Firestore
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Example: add a comment or reaction
+  async function addComment(text) {
+    await addDoc(collection(db, "comments"), {
+      text: text,
+      created: Date.now()
+    });
+  }
+
+  // Expose it globally so HTML buttons can call it
+  window.addComment = addComment;
+</script>
+
+
+</body>
+</html>

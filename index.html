@@ -362,7 +362,7 @@ const pages=document.querySelectorAll('.page');const topBtns=document.querySelec
 function update(){slides.style.transform=`translateX(${-idx*100}%)`;[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===idx))}
 function goTo(i){idx=i;update()}
 setInterval(()=>{idx=(idx+1)%total;update()},4000)
-const calendarBox=document.getElementById("calendarBox");const monthYear=document.getElementById("monthYear");const eventInfo=document.getElementById("eventInfo");let currentMonth=0;let currentYear=2026;const events2026={"2026-01-25":{title:"Arisan Lubis ",text:"Di rumah P.Sitorus/H.br,Lubis(+) [Ama Roland], alamat di Raya Kampung Sawah Gang Pos-Bekasi RT001/RW002."},"2026-02-22":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."},"2026-03-29":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."},"2026-04-26":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."},"2026-05-31":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."}};function renderCalendar(){const firstDay=new Date(currentYear,currentMonth,1).getDay();const daysInMonth=new Date(currentYear,currentMonth+1,0).getDate();monthYear.textContent=new Date(currentYear,currentMonth).toLocaleString("default",{month:"long",year:"numeric"});let table=`
+const calendarBox=document.getElementById("calendarBox");const monthYear=document.getElementById("monthYear");const eventInfo=document.getElementById("eventInfo");let currentMonth=0;let currentYear=2026;const events2026={"2026-01-25":{title:"Arisan Lubis ",text:"Di rumah P.Sitorus/H.br,Lubis(+) [Ama Roland], alamat di Raya Kampung Sawah Gang Pos-Bekasi RT001/RW002. Shareloc: https://maps.app.goo.gl/KtCL5QHYFcLbtxh86"},"2026-02-22":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."},"2026-03-29":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."},"2026-04-26":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."},"2026-05-31":{title:"Arisan Lubis ",text:"Silahkan diisi Arisan Lubis di rumah siapa."}};function renderCalendar(){const firstDay=new Date(currentYear,currentMonth,1).getDay();const daysInMonth=new Date(currentYear,currentMonth+1,0).getDate();monthYear.textContent=new Date(currentYear,currentMonth).toLocaleString("default",{month:"long",year:"numeric"});let table=`
     <table style="width:100%; text-align:center; border-collapse:collapse;">
       <tr style="color:white; font-size:14px;">
         <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
@@ -376,13 +376,22 @@ const calendarBox=document.getElementById("calendarBox");const monthYear=documen
       </td>
     `;if((d+firstDay)%7===0)table+="</tr><tr>"}
 table+="</tr></table>";calendarBox.innerHTML=table}
-function showEvent(dateID){const ev=events2026[dateID];if(!ev){eventInfo.innerHTML="";return}
-eventInfo.innerHTML=`
+function showEvent(dateID) {
+  const ev = events2026[dateID];
+  if (!ev) return eventInfo.innerHTML = "";
+
+  const textWithLink = ev.text.replace(
+    /(https?:\/\/[^\s]+)/g,
+    '<a href="$1" target="_blank" style="color:#00c8ff;">$1</a>'
+  );
+
+  eventInfo.innerHTML = `
     <div class="news-card">
       <h3>${ev.title}</h3>
-      <p>${ev.text}</p>
+      <p>${textWithLink}</p>
     </div>
-  `}
+  `;
+}
 document.getElementById("prevMonth").onclick=()=>{currentMonth=(currentMonth-1+12)%12;renderCalendar();eventInfo.innerHTML=""};document.getElementById("nextMonth").onclick=()=>{currentMonth=(currentMonth+1)%12;renderCalendar();eventInfo.innerHTML=""};renderCalendar()
 const galleryGrid=document.getElementById("galleryGrid");const addPhotoBtn=document.getElementById("addPhotoBtn");const photoInput=document.getElementById("photoInput");let photos=[];addPhotoBtn.onclick=()=>photoInput.click();photoInput.onchange=e=>{const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{photos.push(reader.result);renderGallery()};reader.readAsDataURL(file)};function renderGallery(){galleryGrid.innerHTML=photos.map(src=>`<img src="${src}" style="width:100%; border-radius:8px;">`).join("")}
 </script>
@@ -437,6 +446,7 @@ let storedData=snap.data();const reactionBar=document.createElement('div');react
 
 </body>
 </html>
+
 
 
 
